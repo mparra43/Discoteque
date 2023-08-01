@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Discoteque.Data</id>
+    <version>1.0.0</version>
+    <authors>Discoteque.Data</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net7.0">
+        <dependency id="Microsoft.EntityFrameworkCore.InMemory" version="7.0.9" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\User\Desktop\Discoteque\Discoteque.Data\bin\Debug\net7.0\Discoteque.Data.dll" target="lib\net7.0\Discoteque.Data.dll" />
+  </files>
+</package>
