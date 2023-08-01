@@ -10,3 +10,15 @@ C:\Users\User\Desktop\Discoteque\Discoteque.Data\obj\Debug\net7.0\Discoteque.Dat
 C:\Users\User\Desktop\Discoteque\Discoteque.Data\obj\Debug\net7.0\refint\Discoteque.Data.dll
 C:\Users\User\Desktop\Discoteque\Discoteque.Data\obj\Debug\net7.0\Discoteque.Data.pdb
 C:\Users\User\Desktop\Discoteque\Discoteque.Data\obj\Debug\net7.0\ref\Discoteque.Data.dll
+C:\Users\lorena.parra\Desktop\Discoteque\Discoteque.Data\bin\Debug\net7.0\Discoteque.Data.deps.json
+C:\Users\lorena.parra\Desktop\Discoteque\Discoteque.Data\bin\Debug\net7.0\Discoteque.Data.dll
+C:\Users\lorena.parra\Desktop\Discoteque\Discoteque.Data\bin\Debug\net7.0\Discoteque.Data.pdb
+C:\Users\lorena.parra\Desktop\Discoteque\Discoteque.Data\obj\Debug\net7.0\Discoteque.Data.csproj.AssemblyReference.cache
+C:\Users\lorena.parra\Desktop\Discoteque\Discoteque.Data\obj\Debug\net7.0\Discoteque.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lorena.parra\Desktop\Discoteque\Discoteque.Data\obj\Debug\net7.0\Discoteque.Data.AssemblyInfoInputs.cache
+C:\Users\lorena.parra\Desktop\Discoteque\Discoteque.Data\obj\Debug\net7.0\Discoteque.Data.AssemblyInfo.cs
+C:\Users\lorena.parra\Desktop\Discoteque\Discoteque.Data\obj\Debug\net7.0\Discoteque.Data.csproj.CoreCompileInputs.cache
+C:\Users\lorena.parra\Desktop\Discoteque\Discoteque.Data\obj\Debug\net7.0\Discoteque.Data.dll
+C:\Users\lorena.parra\Desktop\Discoteque\Discoteque.Data\obj\Debug\net7.0\refint\Discoteque.Data.dll
+C:\Users\lorena.parra\Desktop\Discoteque\Discoteque.Data\obj\Debug\net7.0\Discoteque.Data.pdb
+C:\Users\lorena.parra\Desktop\Discoteque\Discoteque.Data\obj\Debug\net7.0\ref\Discoteque.Data.dll

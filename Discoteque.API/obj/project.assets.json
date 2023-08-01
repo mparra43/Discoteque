@@ -11864,24 +11864,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\lorena.parra\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Discoteque\\Discoteque.API\\Discoteque.API.csproj",
+      "projectUniqueName": "C:\\Users\\lorena.parra\\Desktop\\Discoteque\\Discoteque.API\\Discoteque.API.csproj",
       "projectName": "Discoteque.API",
-      "projectPath": "C:\\Users\\User\\Desktop\\Discoteque\\Discoteque.API\\Discoteque.API.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Discoteque\\Discoteque.API\\obj\\",
+      "projectPath": "C:\\Users\\lorena.parra\\Desktop\\Discoteque\\Discoteque.API\\Discoteque.API.csproj",
+      "packagesPath": "C:\\Users\\lorena.parra\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lorena.parra\\Desktop\\Discoteque\\Discoteque.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\lorena.parra\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11896,11 +11891,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\Discoteque\\Discoteque.Business\\Discoteque.Business.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Discoteque\\Discoteque.Business\\Discoteque.Business.csproj"
+            "C:\\Users\\lorena.parra\\Desktop\\Discoteque\\Discoteque.Business\\Discoteque.Business.csproj": {
+              "projectPath": "C:\\Users\\lorena.parra\\Desktop\\Discoteque\\Discoteque.Business\\Discoteque.Business.csproj"
             },
-            "C:\\Users\\User\\Desktop\\Discoteque\\Discoteque.Data\\Discoteque.Data.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\Discoteque\\Discoteque.Data\\Discoteque.Data.csproj"
+            "C:\\Users\\lorena.parra\\Desktop\\Discoteque\\Discoteque.Data\\Discoteque.Data.csproj": {
+              "projectPath": "C:\\Users\\lorena.parra\\Desktop\\Discoteque\\Discoteque.Data\\Discoteque.Data.csproj"
             }
           }
         }

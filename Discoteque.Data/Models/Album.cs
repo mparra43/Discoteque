@@ -31,6 +31,9 @@ public class Album : BaseEntity<int>
     /// The <see cref="Artist"/> Entity this album is refering to
     /// </summary> <summary>
     public virtual Artist? Artist { get; set; }
+
+
+    public virtual ICollection<Song> ?Song { get; set; }
 }
 
 /// <summary>
