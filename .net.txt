@@ -1,6 +1,6 @@
-﻿using System.Data.SqlTypes;
-using Discoteque.Business.IServices;
+using System.Data.SqlTypes;
 using Discoteque.Data.Models;
+using Discoteque.Data.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Discoteque.API.Controllers;
@@ -11,7 +11,7 @@ public class AlbumController : ControllerBase
 {
     private readonly IAlbumService _albumService;
 
-    public AlbumController(IAlbumService albumService)
+    
     {
         _albumService = albumService;
     }

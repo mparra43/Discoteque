@@ -1,63 +1,70 @@
 ﻿
-using System.Security.Cryptography.X509Certificates;
 using Discoteque.Business.IServices;
+using Discoteque.Business.Utils;
 using Discoteque.Data;
 using Discoteque.Data.Models;
-
+using Discoteque.Data.Dto;
+using Microsoft.EntityFrameworkCore.Query;
+using System.Net;
 
 namespace Discoteque.Business.Services;
 
 
 public class TourService : ITourService
 {
-    private IUnitOfWork _unitOfWork;
+    private readonly IUnitOfWork _unitOfWork;
 
     public TourService(IUnitOfWork unitOfWork)
     {
         _unitOfWork = unitOfWork;
     }
 
-
-    public async Task<Tour> CreateTour(Tour tour)
+    public async Task<BaseMessage<Tour>> CreateTour(Tour tour)
     {
-        var newTour = new Tour
+        try
         {
-            Name =tour.Name,
-            ArtistId = tour.ArtistId,
-            City = tour.City,
-            Date = tour.Date,
-            Tickets = tour.Tickets,
-          
-        };
+            var artist = await _unitOfWork.ArtistRepository.FindAsync(tour.ArtistId);
+            if (tour.TourDate.Year <= 2021 || artist == null)
+            {
+                return Utilities.BuildResponse<Tour>(HttpStatusCode.NotFound, BaseMessageStatus.BAD_REQUEST_400);
+            }
 
-        await _unitOfWork.TourRepository.AddAsync(newTour);
-        await _unitOfWork.SaveAsync();
-        return newTour;
-    }
-
-  
-    public async Task<IEnumerable<Tour>> GetToursAsync(bool areReferencesLoaded)
-    {
-        IEnumerable<Tour> tours;
-        if (areReferencesLoaded)
-        {
-           tours = await _unitOfWork.TourRepository.GetAllAsync(null, x => x.OrderBy(x => x.Id), new Tour().GetType().Name);
+            await _unitOfWork.TourRepository.AddAsync(tour);
+            await _unitOfWork.SaveAsync();
         }
-        else
+        catch (Exception)
         {
-            tours = await _unitOfWork.TourRepository.GetAllAsync();
+            return Utilities.BuildResponse<Tour>(HttpStatusCode.InternalServerError, BaseMessageStatus.INTERNAL_SERVER_ERROR_500);
         }
 
-        return tours;
+        return Utilities.BuildResponse(HttpStatusCode.OK, BaseMessageStatus.OK_200, new List<Tour>() { tour });
     }
 
-    public async Task<Tour> GetById(int id)
+    public async Task<Tour> GetTourById(int id)
     {
-        var tour = await _unitOfWork.TourRepository.FindAsync(id);
-        return tour;
+        return await _unitOfWork.TourRepository.FindAsync(id);
     }
 
-    
+    public async Task<IEnumerable<Tour>> GetToursAsync()
+    {
+        return await _unitOfWork.TourRepository.GetAllAsync();
+    }
+
+    public async Task<IEnumerable<Tour>> GetToursByArtist(int artistId)
+    {
+        return await _unitOfWork.TourRepository.GetAllAsync(x => x.ArtistId == artistId, includeProperties: new Artist().GetType().Name);
+    }
+
+    public async Task<IEnumerable<Tour>> GetToursByCity(string city)
+    {
+        return await _unitOfWork.TourRepository.GetAllAsync(x => x.Equals(city));
+    }
+
+    public async Task<IEnumerable<Tour>> GetToursByYear(int year)
+    {
+        return await _unitOfWork.TourRepository.GetAllAsync(x => x.TourDate.Year == year);
+    }
+
     public async Task<Tour> UpdateTour(Tour tour)
     {
         await _unitOfWork.TourRepository.Update(tour);

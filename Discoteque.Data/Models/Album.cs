@@ -34,6 +34,7 @@ public class Album : BaseEntity<int>
 
 
     public virtual ICollection<Song> ?Song { get; set; }
+    public double Cost { get; set; } = 50_000;
 }
 
 /// <summary>

@@ -5,16 +5,12 @@ namespace Discoteque.Data.Models
     public class Tour : BaseEntity<int>
     {
         public string Name { get; set; } = "";
-
         public string City { get; set; } = "";
+        public DateTime TourDate { get; set; } = DateTime.Now;
+        public bool IsSoldOut { get; set; } = false;
 
-        public DateTime Date  { get; set; } = DateTime.Now;
-
-
-        [ForeignKey("id")]
-        public int? ArtistId { get; set; }
+        [ForeignKey("Artist")]
+        public int ArtistId { get; set; }
         public virtual Artist? Artist { get; set; }
-
-        public int Tickets { get; set; } = 10;
     }
 }
